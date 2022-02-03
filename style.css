@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial,sans-serif;
+}
+
+textarea{
+    background: black;
+    color: white;
+    min-height: 99px;
+}
+
+.boxes {
+    width: 600px;
+    display: flex;
+}
+
+.box {
+    width: 200px;
+    background: #333;
+    position: relative;
+    flex-shrink: 0;
+}
+
+span{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+.box::before {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
