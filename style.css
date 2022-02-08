@@ -1,8 +1,9 @@
+
 .box {
     width: 150px;
     height: 150px;
-    border: 1px solid rgb(0,0,0);
-    transition: all 0.5s;
+    border: 1px solid aqua;
+    transition: all 1s;
 }
 
 .box.bigger {
@@ -19,5 +20,41 @@
 }
 
 .box.colored {
-    background: rebeccapurple;
+    background: aqua;
+}
+
+/*/////////////////////label ile ilgili bölüm////////////////////////////////*/
+
+.checkbox {
+    top: 20px;
+    width: 100px;
+    height: 40px;
+    background: #ddd;
+    border-radius: 40px;
+    position: relative;
+    transition: 500ms background;
+}
+
+.checkbox .check-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: tomato;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: 500ms background, 500ms left;
+}
+
+label input:checked + .checkbox  {
+    background:tomato;
+}
+
+label input:checked + .checkbox .check-btn {
+    left: 65px;
+    background: #ddd;
+}
+
+label input{
+    display: none;
 }
